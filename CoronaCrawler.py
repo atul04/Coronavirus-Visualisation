@@ -14,7 +14,7 @@ import re
 import numpy
 import pandas as pd
 from bs4 import BeautifulSoup
-import lxml.html
+# import lxml.html
 
 import csv
 
