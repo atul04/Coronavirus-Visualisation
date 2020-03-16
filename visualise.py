@@ -2,7 +2,7 @@
 # @Date:   2020-03-16T23:28:22+05:30
 # @Email:  atulsahay01@gmail.com
 # @Last modified by:   atul
-# @Last modified time: 2020-03-17T01:58:26+05:30
+# @Last modified time: 2020-03-17T02:08:04+05:30
 
 
 import pandas as pd
@@ -60,7 +60,7 @@ m = folium.Map(location=[45, 0], zoom_start=2.5)
 
 for i in range(len(locations)):
     folium.CircleMarker(location=locations[i],
-    popup=data['Country,Other'].iloc[i]+str("\n\nTotal Cases = ")+str(totalCases[i])+str("\n Deaths = ")+str(data['TotalDeaths'].iloc[i]),
+    tooltip=data['Country,Other'].iloc[i]+str("\n\nTotal Cases = ")+str(totalCases[i])+str("\n Deaths = ")+str(data['TotalDeaths'].iloc[i]),
                             radius=normalize_radius[i],
                             fill_color="#FF0000", # divvy color
                             stroke=False,
