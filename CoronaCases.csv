@@ -1,4 +1,4 @@
-"Country,Other",TotalCases,NewCases,TotalDeaths,NewDeaths,TotalRecovered,ActiveCases,"Serious,Critical",Tot Cases/1M pop
+"Country",TotalCases,NewCases,TotalDeaths,NewDeaths,TotalRecovered,ActiveCases,"Serious,Critical",Tot Cases/1M pop
  China ,"80,880", +36 ," 3,213 ",+14 ,"67,819 "," 9,848 ","3,226 ",56.2
  Italy ,"27,980"," +3,233 "," 2,158 ",+349 ,"2,749 "," 23,073 ","1,851 ",462.8
  Iran ,"14,991"," +1,053 ", 853 ,+129 ,"4,590 "," 9,548 ", ,178.5
