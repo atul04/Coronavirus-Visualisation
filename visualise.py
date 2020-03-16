@@ -2,7 +2,7 @@
 # @Date:   2020-03-16T23:28:22+05:30
 # @Email:  atulsahay01@gmail.com
 # @Last modified by:   atul
-# @Last modified time: 2020-03-17T01:24:30+05:30
+# @Last modified time: 2020-03-17T01:27:50+05:30
 
 
 import pandas as pd
@@ -31,7 +31,7 @@ int(a.replace(',', ''))
 totalCases = [int(i.replace(',', '')) for i in data['TotalCases']]
 max_amount = max(totalCases)
 print(max_amount)
-normalize_radius = [ 10+i*30/max_amount for i in totalCases ]
+normalize_radius = [ i*100/max_amount for i in totalCases ]
 
 data2plot = []
 
@@ -42,7 +42,7 @@ for i in range(len(totalCases)):
 
 # m = folium.Map(location=(a,b), zoom_start=5)
 
-m = folium.Map(location=[100, 0], zoom_start=3)
+m = folium.Map(location=[100, 0], zoom_start=2)
 
 for i in range(len(locations)):
     folium.CircleMarker(location=locations[i],
