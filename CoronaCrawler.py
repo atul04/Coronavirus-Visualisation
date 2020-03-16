@@ -8,34 +8,34 @@
 
 import time
 import requests
+import requests
 from urllib.parse import quote_plus
-from selenium import webdriver
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 import re
 import numpy
 import pandas as pd
 from bs4 import BeautifulSoup
 import lxml.html
 
-from selenium.common.exceptions import TimeoutException
-
 import csv
 
-######### Need to wake up the webdriver
-path = 'geckodriver-v0.23.0-linux64/geckodriver'
+# ######### Need to wake up the webdriver
+# path = 'geckodriver-v0.23.0-linux64/geckodriver'
 
-profile = webdriver.FirefoxProfile()
-profile.set_preference("webdriver.load.strategy", "unstable")
-profile.update_preferences()
+# profile = webdriver.FirefoxProfile()
+# profile.set_preference("webdriver.load.strategy", "unstable")
+# profile.update_preferences()
 
-driver = webdriver.Firefox(firefox_binary=FirefoxBinary(),executable_path=path,firefox_profile=profile)
-t = time.time()
-driver.set_page_load_timeout(100)
+# driver = webdriver.Firefox(firefox_binary=FirefoxBinary(),executable_path=path,firefox_profile=profile)
+# t = time.time()
+# driver.set_page_load_timeout(100)
 
-driver.get("https://www.worldometers.info/coronavirus/")
+# driver.get("https://www.worldometers.info/coronavirus/")
 
-soup = BeautifulSoup(driver.page_source, "html.parser")
-tree = lxml.html.fromstring(driver.page_source)
+sauce = requests.get("https://www.worldometers.info/coronavirus/")
+
+
+soup = BeautifulSoup(sauce.content, "html.parser")
+# tree = lxml.html.fromstring(sauce.content)
 
 tableContent =  soup.find('table', { 'id' : 'main_table_countries' })
 
@@ -65,5 +65,3 @@ with open("CoronaCases.csv",mode='w') as file:
 
 
 time.sleep(3)
-
-driver.quit()
