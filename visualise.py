@@ -2,12 +2,13 @@
 # @Date:   2020-03-16T23:28:22+05:30
 # @Email:  atulsahay01@gmail.com
 # @Last modified by:   atul
-# @Last modified time: 2020-03-17T01:27:50+05:30
+# @Last modified time: 2020-03-17T01:58:26+05:30
 
 
 import pandas as pd
 import folium
 import locale
+import math
 from folium import plugins
 from folium.plugins import HeatMap
 from geopy.geocoders import Nominatim
@@ -31,8 +32,8 @@ int(a.replace(',', ''))
 totalCases = [int(i.replace(',', '')) for i in data['TotalCases']]
 max_amount = max(totalCases)
 print(max_amount)
-normalize_radius = [ i*100/max_amount for i in totalCases ]
-
+normalize_radius = [ 0.01+3*math.log(i,(2)) for i in totalCases ]
+print(normalize_radius)
 data2plot = []
 
 data['Country'].iloc[1]
@@ -42,13 +43,27 @@ for i in range(len(totalCases)):
 
 # m = folium.Map(location=(a,b), zoom_start=5)
 
-m = folium.Map(location=[100, 0], zoom_start=2)
+m = folium.Map(location=[45, 0], zoom_start=2.5)
+
+# html="""
+#     <h1> This is a big popup</h1><br>
+#     With a few lines of code...
+#     <p>
+#     <code>
+#         from numpy import *<br>
+#         exp(-2*pi)
+#     </code>
+#     </p>
+#     """
+
+
 
 for i in range(len(locations)):
     folium.CircleMarker(location=locations[i],
-    popup=data['Country'].iloc[i]+str("\n\n Total Cases = ")+str(totalCases[i])+str("\n Deaths = ")+str(data['TotalDeaths'].iloc[i]),
+    popup=data['Country'].iloc[i]+str("\n\nTotal Cases = ")+str(totalCases[i])+str("\n Deaths = ")+str(data['TotalDeaths'].iloc[i]),
                             radius=normalize_radius[i],
-                            fill_color="#3db7e4", # divvy color
+                            fill_color="#FF0000", # divvy color
+                            stroke=False,
                            ).add_to(m)
 
 
