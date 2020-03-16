@@ -2,7 +2,7 @@
 # @Date:   2019-01-27T16:51:15+05:30
 # @Email:  atulsahay01@gmail.com
 # @Last modified by:   atul
-# @Last modified time: 2020-03-17T01:20:52+05:30
+# @Last modified time: 2020-03-17T05:11:03+05:30
 
 import pandas as pd
 import folium
@@ -56,8 +56,8 @@ while(True):
             writer.writerow(row)
     # print(tbody)
 
-    
-    
+
+
     ### Visualisation Module ###
     geolocator = Nominatim(user_agent="specify_your_app_name_here")
 
@@ -158,14 +158,14 @@ while(True):
                     </div>
                     <div class="progress-bar progress-bar-danger" role="progressbar" style="width:{}%">
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
         '''.format(sum(totalCases),sum(active), sum(recovered), sum(death), sum(active) * 100/ sum(totalCases), sum(recovered) * 100/ sum(totalCases), sum(death) * 100/ sum(totalCases))
 
     for i in range(len(locations)):
         folium.CircleMarker(location=locations[data['Country,Other'].iloc[i]],
-        tooltip=data['Country,Other'].iloc[i]+str("\n\nTotal Cases = ")+str(totalCases[i])+str("\n Deaths = ")+str(data['TotalDeaths'].iloc[i]),
+        tooltip=data['Country,Other'].iloc[i]+str("\n\nTotal Cases = ")+str(totalCases[i])+str("\n Deaths = ")+str(death[i]),
                                 radius=normalize_radius[i],
                                 fill_color="#FF0000", # divvy color
                                 stroke=False,
@@ -185,5 +185,5 @@ while(True):
                     # )
     # m.add_child(hm_wide)
     m.get_root().html.add_child(folium.Element(legend_html))
-    m.save('./public_html/covid-19/index.html')
+    m.save('.././public_html/covid-19/index.html')
     time.sleep(5 * 60)
