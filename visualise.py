@@ -36,7 +36,7 @@ normalize_radius = [ 0.01+3*math.log(i,(2)) for i in totalCases ]
 print(normalize_radius)
 data2plot = []
 
-data['Country'].iloc[1]
+data['Country,Other'].iloc[1]
 
 for i in range(len(totalCases)):
     data2plot.append([locations[i][0], locations[i][1],totalCases[i]])
@@ -60,7 +60,7 @@ m = folium.Map(location=[45, 0], zoom_start=2.5)
 
 for i in range(len(locations)):
     folium.CircleMarker(location=locations[i],
-    popup=data['Country'].iloc[i]+str("\n\nTotal Cases = ")+str(totalCases[i])+str("\n Deaths = ")+str(data['TotalDeaths'].iloc[i]),
+    popup=data['Country,Other'].iloc[i]+str("\n\nTotal Cases = ")+str(totalCases[i])+str("\n Deaths = ")+str(data['TotalDeaths'].iloc[i]),
                             radius=normalize_radius[i],
                             fill_color="#FF0000", # divvy color
                             stroke=False,
