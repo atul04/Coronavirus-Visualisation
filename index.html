@@ -1,0 +1,2868 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_298278579c714455afde7323a5fef5fd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+    <div style='width: 25rem; position: fixed; text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     bottom: 0px; left: 0px; z-index:9999; background-color: white; padding: 5px;'>
+        <div class='card-body'>
+            <h5 class='card-title'>Total Cases</h5 style='margin: 2px'>
+            <h3 class='text-warning' style='margin: 0px'>182198</h3>
+            <table class="table table-striped" style='margin: 0px'>
+                <thead>
+                <tr>
+                    <th>Active</th>
+                    <th>Recovered</th>
+                    <th>Death</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class='text-primary'>96719</td>
+                    <td class='text-success'>78340</td>
+                    <td class='text-danger'>7139</td>
+                </tr>
+                </tbody>
+            </table>
+             <div class="progress" style='margin: 0px'>
+                <div class="progress-bar progress-bar-primary" role="progressbar" style="width:53.084556361760285%">
+                </div>
+                <div class="progress-bar progress-bar-success" role="progressbar" style="width:42.99717889329191%">
+                </div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width:3.918264744947804%">
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_298278579c714455afde7323a5fef5fd" ></div>
+        
+</body>
+<script>    
+    
+            var map_298278579c714455afde7323a5fef5fd = L.map(
+                "map_298278579c714455afde7323a5fef5fd",
+                {
+                    center: [45.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1da571598d46444f9b07f36f66de5a81 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            var circle_marker_2be1b690f062427aa788a35bf99bdd38 = L.circleMarker(
+                [35.000074, 104.999927],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 48.92048613037114, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2be1b690f062427aa788a35bf99bdd38.bindTooltip(
+                `<div>
+                      China 
+
+Total Cases = 80880
+ Deaths =  3,213 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7eb15b618a9c43dba36d0cfc026892aa = L.circleMarker(
+                [42.6384261, 12.674297],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 44.32632502615635, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_7eb15b618a9c43dba36d0cfc026892aa.bindTooltip(
+                `<div>
+                      Italy 
+
+Total Cases = 27980
+ Deaths =  2,158 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9b337d6efd1c402db4ea28fa1b1cbc3a = L.circleMarker(
+                [32.6475314, 54.5643516],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 41.62542701037113, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_9b337d6efd1c402db4ea28fa1b1cbc3a.bindTooltip(
+                `<div>
+                      Iran 
+
+Total Cases = 14991
+ Deaths =  853 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_37e3eb7250e14d3486a130cbea9377bb = L.circleMarker(
+                [39.3262345, -4.8380649],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.847961163827826, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_37e3eb7250e14d3486a130cbea9377bb.bindTooltip(
+                `<div>
+                      Spain 
+
+Total Cases = 9942
+ Deaths =  342 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1d11f9e8667f4e5f81a0c2f1530677b3 = L.circleMarker(
+                [36.638392, 127.6961188],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.03318434389676, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_1d11f9e8667f4e5f81a0c2f1530677b3.bindTooltip(
+                `<div>
+                      S. Korea 
+
+Total Cases = 8236
+ Deaths =  75 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4f8ae59c321c4d3f9e46af4c08193ace = L.circleMarker(
+                [51.0834196, 10.4234469],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 38.47591970644337, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_4f8ae59c321c4d3f9e46af4c08193ace.bindTooltip(
+                `<div>
+                      Germany 
+
+Total Cases = 7241
+ Deaths =  15 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9beb872b33c541a2bce1f86f72c6ec22 = L.circleMarker(
+                [46.603354, 1.8883335],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 38.09633743161215, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_9beb872b33c541a2bce1f86f72c6ec22.bindTooltip(
+                `<div>
+                      France 
+
+Total Cases = 6633
+ Deaths =  148 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9587e81f041742ea936b22edbe1297d2 = L.circleMarker(
+                [39.7837304, -100.4458825],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.46685452691974, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_9587e81f041742ea936b22edbe1297d2.bindTooltip(
+                `<div>
+                      USA 
+
+Total Cases = 4552
+ Deaths =  85 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e1504cae475f418cafd29adae33a38db = L.circleMarker(
+                [46.7985624, 8.2319736],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.610856815672896, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e1504cae475f418cafd29adae33a38db.bindTooltip(
+                `<div>
+                      Switzerland 
+
+Total Cases = 2353
+ Deaths =  19 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1a74f776886f46c6915e1341ca2f31cd = L.circleMarker(
+                [54.7023545, -3.2765753],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.784567039712204, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_1a74f776886f46c6915e1341ca2f31cd.bindTooltip(
+                `<div>
+                      UK 
+
+Total Cases = 1543
+ Deaths =  55 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_25a867310762493d87015410dceeffce = L.circleMarker(
+                [52.5001698, 5.7480821],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.403637251001822, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_25a867310762493d87015410dceeffce.bindTooltip(
+                `<div>
+                      Netherlands 
+
+Total Cases = 1413
+ Deaths =  24 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f2a0233e2f7c4840bba49d478b76fbee = L.circleMarker(
+                [60.5000209, 9.0999715],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.17405185603541, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_f2a0233e2f7c4840bba49d478b76fbee.bindTooltip(
+                `<div>
+                      Norway 
+
+Total Cases = 1340
+ Deaths =  3 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e991aaca63ae4cfe9377780b49e912df = L.circleMarker(
+                [59.6749712, 14.5208584],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.401711688416285, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e991aaca63ae4cfe9377780b49e912df.bindTooltip(
+                `<div>
+                      Sweden 
+
+Total Cases = 1121
+ Deaths =  7 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_78e3c269bbb04664b6225ee310b4e78e = L.circleMarker(
+                [50.6402809, 4.6667145],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.15137173634208, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_78e3c269bbb04664b6225ee310b4e78e.bindTooltip(
+                `<div>
+                      Belgium 
+
+Total Cases = 1058
+ Deaths =  10 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3608af10d93a465e9880f61983ebc37a = L.circleMarker(
+                [47.2000338, 13.199959],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.984565538227088, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_3608af10d93a465e9880f61983ebc37a.bindTooltip(
+                `<div>
+                      Austria 
+
+Total Cases = 1018
+ Deaths =  3 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0fc0332f4b9d43ab86e6c4e81f7ce039 = L.circleMarker(
+                [55.670249, 10.3333283],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.518151065174212, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_0fc0332f4b9d43ab86e6c4e81f7ce039.bindTooltip(
+                `<div>
+                      Denmark 
+
+Total Cases = 914
+ Deaths =  4 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a1f42ececc434ee08f3fb0bb9dfcb959 = L.circleMarker(
+                [36.5748441, 139.2394179],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.42723161645486, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_a1f42ececc434ee08f3fb0bb9dfcb959.bindTooltip(
+                `<div>
+                      Japan 
+
+Total Cases = 895
+ Deaths =  27 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_48a93d12bb63416fb8ba8b929072921b = L.circleMarker(
+                [53.8953584, 27.5554078],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.338830487546186, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_48a93d12bb63416fb8ba8b929072921b.bindTooltip(
+                `<div>
+                      Diamond Princess 
+
+Total Cases = 696
+ Deaths =  7 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_370fea65f5f04c3bb7db17fb67f2d65f = L.circleMarker(
+                [4.5693754, 102.2656823],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.44397472849565, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_370fea65f5f04c3bb7db17fb67f2d65f.bindTooltip(
+                `<div>
+                      Malaysia 
+
+Total Cases = 566
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dadc164dfe7c490e9c4634449a297058 = L.circleMarker(
+                [25.3336984, 51.2295295],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.344231388606076, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_dadc164dfe7c490e9c4634449a297058.bindTooltip(
+                `<div>
+                      Qatar 
+
+Total Cases = 439
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ed4558c5adb84477987109f93a71f67e = L.circleMarker(
+                [61.0666922, -107.9917071],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.17329756612156, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ed4558c5adb84477987109f93a71f67e.bindTooltip(
+                `<div>
+                      Canada 
+
+Total Cases = 422
+ Deaths =  4 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_52979636504a4551b84d7c7f2020990f = L.circleMarker(
+                [-24.7761086, 134.755],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.66224035614973, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_52979636504a4551b84d7c7f2020990f.bindTooltip(
+                `<div>
+                      Australia 
+
+Total Cases = 375
+ Deaths =  5 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ad892079823743eda54e016b1c4ee097 = L.circleMarker(
+                [38.9953683, 21.9877132],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.38829485591189, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ad892079823743eda54e016b1c4ee097.bindTooltip(
+                `<div>
+                      Greece 
+
+Total Cases = 352
+ Deaths =  4 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d7b84d6cd5aa415c83b22d1969f56f8a = L.circleMarker(
+                [49.8167003, 15.4749544],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.288794264106297, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_d7b84d6cd5aa415c83b22d1969f56f8a.bindTooltip(
+                `<div>
+                      Czechia 
+
+Total Cases = 344
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e07efd277eb742bbb053fbe05c5a879d = L.circleMarker(
+                [40.0332629, -7.8896263],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.122062220421654, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e07efd277eb742bbb053fbe05c5a879d.bindTooltip(
+                `<div>
+                      Portugal 
+
+Total Cases = 331
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_30b11453db0840fbbf35955c0fe06b47 = L.circleMarker(
+                [31.5313113, 34.8667654],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.667505561386488, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_30b11453db0840fbbf35955c0fe06b47.bindTooltip(
+                `<div>
+                      Israel 
+
+Total Cases = 298
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_835dc18fb6e04c46be82c9efea2ae028 = L.circleMarker(
+                [63.2467777, 25.9209164],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.36682321817052, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_835dc18fb6e04c46be82c9efea2ae028.bindTooltip(
+                `<div>
+                      Finland 
+
+Total Cases = 278
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_46da7232a98c459ca6372c2114664948 = L.circleMarker(
+                [45.8133113, 14.4808369],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.95898072408293, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_46da7232a98c459ca6372c2114664948.bindTooltip(
+                `<div>
+                      Slovenia 
+
+Total Cases = 253
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_617b35d0c794478db9823686ef66784f = L.circleMarker(
+                [1.357107, 103.8194992],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.784437510817344, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_617b35d0c794478db9823686ef66784f.bindTooltip(
+                `<div>
+                      Singapore 
+
+Total Cases = 243
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2179d8888ef542688f2421f59ca39397 = L.circleMarker(
+                [-10.3333333, -53.2],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.621094158750214, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2179d8888ef542688f2421f59ca39397.bindTooltip(
+                `<div>
+                      Brazil 
+
+Total Cases = 234
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_410bde9ad24a4c648685b6139f5866f0 = L.circleMarker(
+                [26.1551249, 50.5344606],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.48964546187275, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_410bde9ad24a4c648685b6139f5866f0.bindTooltip(
+                `<div>
+                      Bahrain 
+
+Total Cases = 227
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d12f00b435584a7a899238be87cdadbe = L.circleMarker(
+                [58.7523778, 25.3319078],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.04844029851634, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_d12f00b435584a7a899238be87cdadbe.bindTooltip(
+                `<div>
+                      Estonia 
+
+Total Cases = 205
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a713f653503b41a98513aa226a54816a = L.circleMarker(
+                [64.9841821, -18.1059013],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.89806986023883, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_a713f653503b41a98513aa226a54816a.bindTooltip(
+                `<div>
+                      Iceland 
+
+Total Cases = 198
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_df8bcefd624342cba70c5803918dbe08 = L.circleMarker(
+                [30.3308401, 71.247499],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.58068586817104, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_df8bcefd624342cba70c5803918dbe08.bindTooltip(
+                `<div>
+                      Pakistan 
+
+Total Cases = 184
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2cf8a21981b34b15ac3de7a7ee74d823 = L.circleMarker(
+                [52.215933, 19.134422],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.412816650248995, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2cf8a21981b34b15ac3de7a7ee74d823.bindTooltip(
+                `<div>
+                      Poland 
+
+Total Cases = 177
+ Deaths =  4 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_545bf9fb8c16419cb00d5323959392b6 = L.circleMarker(
+                [52.865196, -7.9794599],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.238172808413108, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_545bf9fb8c16419cb00d5323959392b6.bindTooltip(
+                `<div>
+                      Ireland 
+
+Total Cases = 170
+ Deaths =  2 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c7a6cc8ca82749c9b5d5edaaec6b4d18 = L.circleMarker(
+                [45.9852129, 24.6859225],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.186952268336285, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_c7a6cc8ca82749c9b5d5edaaec6b4d18.bindTooltip(
+                `<div>
+                      Romania 
+
+Total Cases = 168
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f69c4e8d434f4106a9eea5a45e4285d7 = L.circleMarker(
+                [-31.7613365, -71.3187697],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.866206656586748, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_f69c4e8d434f4106a9eea5a45e4285d7.bindTooltip(
+                `<div>
+                      Chile 
+
+Total Cases = 156
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ce67dd793c214c19bc9c23984a7a74eb = L.circleMarker(
+                [22.2793278, 114.1628131],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.838373215822717, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ce67dd793c214c19bc9c23984a7a74eb.bindTooltip(
+                `<div>
+                      Hong Kong 
+
+Total Cases = 155
+ Deaths =  4 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2749554909eb4c0085463ac7fa5e089b = L.circleMarker(
+                [26.2540493, 29.2675469],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.696456071487642, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2749554909eb4c0085463ac7fa5e089b.bindTooltip(
+                `<div>
+                      Egypt 
+
+Total Cases = 150
+ Deaths =  2 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2936463f91024615bfe5e68ec79b3232 = L.circleMarker(
+                [14.8971921, 100.83273],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.609017034509094, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2936463f91024615bfe5e68ec79b3232.bindTooltip(
+                `<div>
+                      Thailand 
+
+Total Cases = 147
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2fbe8bfced3d4442a582da76ebae6b89 = L.circleMarker(
+                [12.7503486, 122.7312101],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.45924135851405, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2fbe8bfced3d4442a582da76ebae6b89.bindTooltip(
+                `<div>
+                      Philippines 
+
+Total Cases = 142
+ Deaths =  12 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c278aad63b0c4064b443acfb3f7622a8 = L.circleMarker(
+                [-2.4833826, 117.8902853],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.208267571373316, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_c278aad63b0c4064b443acfb3f7622a8.bindTooltip(
+                `<div>
+                      Indonesia 
+
+Total Cases = 134
+ Deaths =  5 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_33375ac5aae9413d9a507b8ed53dd6f1 = L.circleMarker(
+                [33.0955793, 44.1749775],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.17584730650357, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_33375ac5aae9413d9a507b8ed53dd6f1.bindTooltip(
+                `<div>
+                      Iraq 
+
+Total Cases = 133
+ Deaths =  10 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ef483cc7a86a4ec4801b88e6a4e0aaef = L.circleMarker(
+                [25.6242618, 42.3528328],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.17584730650357, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ef483cc7a86a4ec4801b88e6a4e0aaef.bindTooltip(
+                `<div>
+                      Saudi Arabia 
+
+Total Cases = 133
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4673f2a0c0d242e99ee56dd177a33c4a = L.circleMarker(
+                [22.3511148, 78.6677428],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.043681766269764, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_4673f2a0c0d242e99ee56dd177a33c4a.bindTooltip(
+                `<div>
+                      India 
+
+Total Cases = 129
+ Deaths =  2 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e65e489081574306abe5c7fc29aa52ec = L.circleMarker(
+                [29.2733964, 47.4979476],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.83754351601772, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e65e489081574306abe5c7fc29aa52ec.bindTooltip(
+                `<div>
+                      Kuwait 
+
+Total Cases = 123
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fa895a4bbba24a80b6e38f0eaaa8a1a4 = L.circleMarker(
+                [43.9458623, 12.458306],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.31455297433078, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_fa895a4bbba24a80b6e38f0eaaa8a1a4.bindTooltip(
+                `<div>
+                      San Marino 
+
+Total Cases = 109
+ Deaths =  7 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7bb87cbefb1e4a0ba22ef79b607e9606 = L.circleMarker(
+                [33.8750629, 35.843409],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.31455297433078, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_7bb87cbefb1e4a0ba22ef79b607e9606.bindTooltip(
+                `<div>
+                      Lebanon 
+
+Total Cases = 109
+ Deaths =  3 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2b3b502cfe884e9f99a0d393be24d4e7 = L.circleMarker(
+                [49.4871968, 31.2718321],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.854129532345627, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2b3b502cfe884e9f99a0d393be24d4e7.bindTooltip(
+                `<div>
+                      UAE 
+
+Total Cases = 98
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9b3e937b78014a30aa50d948aa4af236 = L.circleMarker(
+                [64.6863136, 97.7453061],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.627476433324098, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_9b3e937b78014a30aa50d948aa4af236.bindTooltip(
+                `<div>
+                      Russia 
+
+Total Cases = 93
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_49db9c3c6dce48919d5c3994185a6d03 = L.circleMarker(
+                [-6.8699697, -75.0458515],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.288794264106297, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_49db9c3c6dce48919d5c3994185a6d03.bindTooltip(
+                `<div>
+                      Peru 
+
+Total Cases = 86
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_773f3700ecb645b5bed14a9c15f8eb3c = L.circleMarker(
+                [49.8158683, 6.1296751],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.029550008653878, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_773f3700ecb645b5bed14a9c15f8eb3c.bindTooltip(
+                `<div>
+                      Luxembourg 
+
+Total Cases = 81
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b2aaedfbc8ab4f24bcf4568514437250 = L.circleMarker(
+                [48.7411522, 19.4528646],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.519775004326938, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_b2aaedfbc8ab4f24bcf4568514437250.bindTooltip(
+                `<div>
+                      Slovakia 
+
+Total Cases = 72
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_584db52e793c43009334e7fa8ceaa4bb = L.circleMarker(
+                [23.9739374, 120.9820179],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.208267571373316, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_584db52e793c43009334e7fa8ceaa4bb.bindTooltip(
+                `<div>
+                      Taiwan 
+
+Total Cases = 67
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b95cacf0a6a748a0a62b2943e564ec32 = L.circleMarker(
+                [-28.8166236, 24.991639],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_b95cacf0a6a748a0a62b2943e564ec32.bindTooltip(
+                `<div>
+                      South Africa 
+
+Total Cases = 64
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0906cf25247448cd805eac9092f49165 = L.circleMarker(
+                [42.6073975, 25.4856617],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.872588931160628, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_0906cf25247448cd805eac9092f49165.bindTooltip(
+                `<div>
+                      Bulgaria 
+
+Total Cases = 62
+ Deaths =  2 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e11d923bd48d44db99a91d2cd94933b9 = L.circleMarker(
+                [13.2904027, 108.4265113],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.80221201268866, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e11d923bd48d44db99a91d2cd94933b9.bindTooltip(
+                `<div>
+                      Vietnam 
+
+Total Cases = 61
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2d9f62acb03e49a2bffdc6d0486c4c24 = L.circleMarker(
+                [28.0000272, 2.9999825],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.730671786825557, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2d9f62acb03e49a2bffdc6d0486c4c24.bindTooltip(
+                `<div>
+                      Algeria 
+
+Total Cases = 60
+ Deaths =  4 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8ceb61a56e5f468dac9cd0601f27b5d2 = L.circleMarker(
+                [-1.3397668, -79.3666965],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.583942985382716, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_8ceb61a56e5f468dac9cd0601f27b5d2.bindTooltip(
+                `<div>
+                      Ecuador 
+
+Total Cases = 58
+ Deaths =  2 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_598c21029080421eb7b04630676046f0 = L.circleMarker(
+                [45.5643442, 17.0118954],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.508670042494227, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_598c21029080421eb7b04630676046f0.bindTooltip(
+                `<div>
+                      Croatia 
+
+Total Cases = 57
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0ce7009cde164626b7cd6ff18cb7cbe9 = L.circleMarker(
+                [44.024322850000004, 21.07657433209902],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.508670042494227, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_0ce7009cde164626b7cd6ff18cb7cbe9.bindTooltip(
+                `<div>
+                      Serbia 
+
+Total Cases = 57
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d68bb192145848249a263eea2c5b4acb = L.circleMarker(
+                [-34.9964963, -64.9672817],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.432064766172815, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_d68bb192145848249a263eea2c5b4acb.bindTooltip(
+                `<div>
+                      Argentina 
+
+Total Cases = 56
+ Deaths =  2 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fad2952c794c47e6ab56e3007afce1d9 = L.circleMarker(
+                [8.559559, -81.1308434],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.354079140573983, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_fad2952c794c47e6ab56e3007afce1d9.bindTooltip(
+                `<div>
+                      Panama 
+
+Total Cases = 55
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3d112c3ae262484a863249f74dbe53f8 = L.circleMarker(
+                [4.4137155, 114.5653908],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.274662506490408, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_3d112c3ae262484a863249f74dbe53f8.bindTooltip(
+                `<div>
+                      Brunei 
+
+Total Cases = 54
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d373f1959df242f990f18fcec28eb5cf = L.circleMarker(
+                [2.8894434, -73.783892],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.274662506490408, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_d373f1959df242f990f18fcec28eb5cf.bindTooltip(
+                `<div>
+                      Colombia 
+
+Total Cases = 54
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_308e6a89c3bf48c6b02ab069d978af08 = L.circleMarker(
+                [19.4326296, -99.1331785],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.1937613636896, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_308e6a89c3bf48c6b02ab069d978af08.bindTooltip(
+                `<div>
+                      Mexico 
+
+Total Cases = 53
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6f4e635729aa4d83bddbc9a295c26846 = L.circleMarker(
+                [41.000028, 19.9999619],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.02727602591449, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_6f4e635729aa4d83bddbc9a295c26846.bindTooltip(
+                `<div>
+                      Albania 
+
+Total Cases = 51
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4f769c47d82f4778ac440f8baa273077 = L.circleMarker(
+                [38.9597594, 34.9249653],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.673766555032916, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_4f769c47d82f4778ac440f8baa273077.bindTooltip(
+                `<div>
+                      Turkey 
+
+Total Cases = 47
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e667616883284ebc8c0314944615e1d5 = L.circleMarker(
+                [34.9823018, 33.1451285],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.58068586817104, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e667616883284ebc8c0314944615e1d5.bindTooltip(
+                `<div>
+                      Cyprus 
+
+Total Cases = 46
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bc1720835c424b578c17ad1540ba4092 = L.circleMarker(
+                [40.7696272, 44.6736646],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.485559288989027, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_bc1720835c424b578c17ad1540ba4092.bindTooltip(
+                `<div>
+                      Armenia 
+
+Total Cases = 45
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4653a85b0d204a14af73cc7a7ac0e04c = L.circleMarker(
+                [47.1817585, 19.5060937],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.866206656586746, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_4653a85b0d204a14af73cc7a7ac0e04c.bindTooltip(
+                `<div>
+                      Hungary 
+
+Total Cases = 39
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_899158581d5d4b228d3f6413fec21e2c = L.circleMarker(
+                [31.94696655, 35.27386547291496],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.866206656586746, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_899158581d5d4b228d3f6413fec21e2c.bindTooltip(
+                `<div>
+                      Palestine 
+
+Total Cases = 39
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_23f4d34115724aa58e09eec6efc14dde = L.circleMarker(
+                [31.1728205, -7.3362482],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.753782540330755, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_23f4d34115724aa58e09eec6efc14dde.bindTooltip(
+                `<div>
+                      Morocco 
+
+Total Cases = 38
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a763db4ceb8349448f62ef75b32ee285 = L.circleMarker(
+                [53.4250605, 27.6971358],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.519775004326936, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_a763db4ceb8349448f62ef75b32ee285.bindTooltip(
+                `<div>
+                      Belarus 
+
+Total Cases = 36
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0c4a881cdf9b4720b8e67145d66d24f0 = L.circleMarker(
+                [10.2735633, -84.0739102],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.397849050834898, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_0c4a881cdf9b4720b8e67145d66d24f0.bindTooltip(
+                `<div>
+                      Costa Rica 
+
+Total Cases = 35
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6c58cfd4328441d6af9a1266b75e70f5 = L.circleMarker(
+                [56.8406494, 24.7537645],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.27238852375102, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_6c58cfd4328441d6af9a1266b75e70f5.bindTooltip(
+                `<div>
+                      Latvia 
+
+Total Cases = 34
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_804bea503cec40b2aa148823a0d3250f = L.circleMarker(
+                [32.3293809, -83.1137366],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.143182358075359, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_804bea503cec40b2aa148823a0d3250f.bindTooltip(
+                `<div>
+                      Georgia 
+
+Total Cases = 33
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e856b9b4f7cf4337b75c2270ce67f285 = L.circleMarker(
+                [35.8885993, 14.4476911],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.730671786825555, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e856b9b4f7cf4337b75c2270ce67f285.bindTooltip(
+                `<div>
+                      Malta 
+
+Total Cases = 30
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bf79231689e94117b38614e248394b15 = L.circleMarker(
+                [31.1667049, 36.941628],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.583942985382718, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_bf79231689e94117b38614e248394b15.bindTooltip(
+                `<div>
+                      Jordan 
+
+Total Cases = 29
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8b596d4d17074987a9a0349fb1676ae7 = L.circleMarker(
+                [47.2879608, 28.5670941],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.583942985382718, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_8b596d4d17074987a9a0349fb1676ae7.bindTooltip(
+                `<div>
+                      Moldova 
+
+Total Cases = 29
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e098a02fe13b4a6f8b4364fd827d9eb4 = L.circleMarker(
+                [7.5554942, 80.7137847],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.432064766172811, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e098a02fe13b4a6f8b4364fd827d9eb4.bindTooltip(
+                `<div>
+                      Sri Lanka 
+
+Total Cases = 28
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f57beab131b349a3bfc70eb067f3e6fc = L.circleMarker(
+                [40.3936294, 47.7872508],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.941568569324174, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_f57beab131b349a3bfc70eb067f3e6fc.bindTooltip(
+                `<div>
+                      Azerbaijan 
+
+Total Cases = 25
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5ed50b8a826a4f32916507a58c723409 = L.circleMarker(
+                [44.3053476, 17.5961467],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.941568569324174, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_5ed50b8a826a4f32916507a58c723409.bindTooltip(
+                `<div>
+                      Bosnia and Herzegovina 
+
+Total Cases = 25
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8b151dc89bd64410b6f6a82198a1b607 = L.circleMarker(
+                [41.6171214, 21.7168387],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.76488750216347, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_8b151dc89bd64410b6f6a82198a1b607.bindTooltip(
+                `<div>
+                      North Macedonia 
+
+Total Cases = 24
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_17fccb43d8ff46359ebaf1cd10e72e72 = L.circleMarker(
+                [14.4750607, -14.4529612],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.76488750216347, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_17fccb43d8ff46359ebaf1cd10e72e72.bindTooltip(
+                `<div>
+                      Senegal 
+
+Total Cases = 24
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eff5919090114dd2a1a369bae9cf5b3e = L.circleMarker(
+                [21.0000287, 57.0036901],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.388294855911893, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_eff5919090114dd2a1a369bae9cf5b3e.bindTooltip(
+                `<div>
+                      Oman 
+
+Total Cases = 22
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1de618e7ac264e5db961db0cb254e6a7 = L.circleMarker(
+                [33.7680065, 66.2385139],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.186952268336283, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_1de618e7ac264e5db961db0cb254e6a7.bindTooltip(
+                `<div>
+                      Afghanistan 
+
+Total Cases = 21
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_95422158c73049f2af3f3f2a5bc7759d = L.circleMarker(
+                [19.0974031, -70.3028026],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.186952268336283, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_95422158c73049f2af3f3f2a5bc7759d.bindTooltip(
+                `<div>
+                      Dominican Republic 
+
+Total Cases = 21
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ecca7349421c4eb49ef07a0106ce31d0 = L.circleMarker(
+                [33.8439408, 9.400138],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.975784284662089, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ecca7349421c4eb49ef07a0106ce31d0.bindTooltip(
+                `<div>
+                      Tunisia 
+
+Total Cases = 20
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_79dac27ff58d4422a098044c2710ae33 = L.circleMarker(
+                [62.0448724, -7.0322972],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.519775004326936, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_79dac27ff58d4422a098044c2710ae33.bindTooltip(
+                `<div>
+                      Faeroe Islands 
+
+Total Cases = 18
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_504feefa841a4453813fdaa3952b3c9c = L.circleMarker(
+                [55.3500003, 23.7499997],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.27238852375102, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_504feefa841a4453813fdaa3952b3c9c.bindTooltip(
+                `<div>
+                      Lithuania 
+
+Total Cases = 17
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3aee52171e3145a0ba7a90cbd3b4a0df = L.circleMarker(
+                [8.0018709, -66.1109318],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.27238852375102, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_3aee52171e3145a0ba7a90cbd3b4a0df.bindTooltip(
+                `<div>
+                      Venezuela 
+
+Total Cases = 17
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e680099a0a4d44d4b0073a141b8eba64 = L.circleMarker(
+                [12.0753083, -1.6880314],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.730671786825555, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e680099a0a4d44d4b0073a141b8eba64.bindTooltip(
+                `<div>
+                      Burkina Faso 
+
+Total Cases = 15
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5ff81bde8a454d56a99e03f1ebc241ec = L.circleMarker(
+                [18.1152958, -77.1598454610168],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.730671786825555, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_5ff81bde8a454d56a99e03f1ebc241ec.bindTooltip(
+                `<div>
+                      Jamaica 
+
+Total Cases = 15
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c5006d23743b474eb03fc17df258d286 = L.circleMarker(
+                [14.6113732, -60.9620777],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.730671786825555, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_c5006d23743b474eb03fc17df258d286.bindTooltip(
+                `<div>
+                      Martinique 
+
+Total Cases = 15
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4d40e73e5c97458dbc57382b4debf2fb = L.circleMarker(
+                [42.5407167, 1.5732033],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.432064766172811, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_4d40e73e5c97458dbc57382b4debf2fb.bindTooltip(
+                `<div>
+                      Andorra 
+
+Total Cases = 14
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5d3269574dd345a180617ef711d830b9 = L.circleMarker(
+                [4.7064352, 73.3287853],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.111319154423276, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_5d3269574dd345a180617ef711d830b9.bindTooltip(
+                `<div>
+                      Maldives 
+
+Total Cases = 13
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7d931bcde26e4115971d884415d59186 = L.circleMarker(
+                [13.5066394, 104.869423],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.76488750216347, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_7d931bcde26e4115971d884415d59186.bindTooltip(
+                `<div>
+                      Cambodia 
+
+Total Cases = 12
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a131c8bf6d5f40e9981bdd87a7a9bb76 = L.circleMarker(
+                [22.1757605, 113.5514142],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.388294855911893, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_a131c8bf6d5f40e9981bdd87a7a9bb76.bindTooltip(
+                `<div>
+                      Macao 
+
+Total Cases = 11
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cdb0f79f837540df9b43387cc32e8f64 = L.circleMarker(
+                [-17.0568696, -64.9912286],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.388294855911893, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_cdb0f79f837540df9b43387cc32e8f64.bindTooltip(
+                `<div>
+                      Bolivia 
+
+Total Cases = 11
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_81079eec618f4626ac0a5e0bd8b88c1f = L.circleMarker(
+                [4.0039882, -52.999998],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.388294855911893, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_81079eec618f4626ac0a5e0bd8b88c1f.bindTooltip(
+                `<div>
+                      French Guiana 
+
+Total Cases = 11
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f43b620566214286a3d6f12787073a1b = L.circleMarker(
+                [47.2286086, 65.2093197],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.975784284662089, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_f43b620566214286a3d6f12787073a1b.bindTooltip(
+                `<div>
+                      Kazakhstan 
+
+Total Cases = 10
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_628c14c7219f4ad0a699a505120e9e39 = L.circleMarker(
+                [-21.1309332, 55.5265771],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.519775004326938, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_628c14c7219f4ad0a699a505120e9e39.bindTooltip(
+                `<div>
+                      Réunion 
+
+Total Cases = 9
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e89dabab0eda47fd98795995811ddfec = L.circleMarker(
+                [15.6356088, -89.8988087],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e89dabab0eda47fd98795995811ddfec.bindTooltip(
+                `<div>
+                      Guatemala 
+
+Total Cases = 8
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ffdc6871d542449788241a52b32c2fce = L.circleMarker(
+                [-41.5000831, 172.8344077],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ffdc6871d542449788241a52b32c2fce.bindTooltip(
+                `<div>
+                      New Zealand 
+
+Total Cases = 8
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_24144342f6c04ff68bb66375aeb8ead9 = L.circleMarker(
+                [24.4768598, 90.2932299],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_24144342f6c04ff68bb66375aeb8ead9.bindTooltip(
+                `<div>
+                      Bangladesh 
+
+Total Cases = 8
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_25a95b96cd554e0abea33874df83b870 = L.circleMarker(
+                [-23.3165935, -58.1693445],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_25a95b96cd554e0abea33874df83b870.bindTooltip(
+                `<div>
+                      Paraguay 
+
+Total Cases = 8
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_df904e2f9a7a41ee8c6aea4812d16613 = L.circleMarker(
+                [-32.8755548, -56.0201525],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_df904e2f9a7a41ee8c6aea4812d16613.bindTooltip(
+                `<div>
+                      Uruguay 
+
+Total Cases = 8
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_067014c1f41d41388f95a5651837fc55 = L.circleMarker(
+                [41.32373, 63.9528098],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_067014c1f41d41388f95a5651837fc55.bindTooltip(
+                `<div>
+                      Uzbekistan 
+
+Total Cases = 8
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b50eb50c30f14e4bbc7ac642fb4ae25d = L.circleMarker(
+                [4.8417097, -58.6416891],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.432064766172813, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_b50eb50c30f14e4bbc7ac642fb4ae25d.bindTooltip(
+                `<div>
+                      Guyana 
+
+Total Cases = 7
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e5e9c0b1c7474c139cc65ef62aed2c32 = L.circleMarker(
+                [49.4871968, 31.2718321],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.432064766172813, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e5e9c0b1c7474c139cc65ef62aed2c32.bindTooltip(
+                `<div>
+                      Ukraine 
+
+Total Cases = 7
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6c327aa02c6d40a2af77b0d105878658 = L.circleMarker(
+                [47.1416307, 9.5531527],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.432064766172813, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_6c327aa02c6d40a2af77b0d105878658.bindTooltip(
+                `<div>
+                      Liechtenstein 
+
+Total Cases = 7
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_158ad3824f0c4f41afe84a834832d0bf = L.circleMarker(
+                [43.7323492, 7.4276832],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.764887502163468, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_158ad3824f0c4f41afe84a834832d0bf.bindTooltip(
+                `<div>
+                      Monaco 
+
+Total Cases = 6
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e4f80aefd18d4dc5b9b19c60cee09c70 = L.circleMarker(
+                [60.6167942, -145.7996671],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.764887502163468, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e4f80aefd18d4dc5b9b19c60cee09c70.bindTooltip(
+                `<div>
+                      Channel Islands 
+
+Total Cases = 6
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_922b0bb442f14f48b0e2730c144e786b = L.circleMarker(
+                [8.0300284, -1.0800271],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.764887502163468, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_922b0bb442f14f48b0e2730c144e786b.bindTooltip(
+                `<div>
+                      Ghana 
+
+Total Cases = 6
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_19895a9896744f0daf9f4651f15c4c90 = L.circleMarker(
+                [16.2490067, -61.5650444],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.764887502163468, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_19895a9896744f0daf9f4651f15c4c90.bindTooltip(
+                `<div>
+                      Guadeloupe 
+
+Total Cases = 6
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ec5117226d0b4faf83d5d034306f9c9f = L.circleMarker(
+                [15.2572432, -86.0755145],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.764887502163468, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ec5117226d0b4faf83d5d034306f9c9f.bindTooltip(
+                `<div>
+                      Honduras 
+
+Total Cases = 6
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b2666c12ba264e8ebf52c8379e082ddd = L.circleMarker(
+                [4.6125522, 13.1535811],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.975784284662087, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_b2666c12ba264e8ebf52c8379e082ddd.bindTooltip(
+                `<div>
+                      Cameroon 
+
+Total Cases = 5
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b2bd151db3f646dba82adba95f49911a = L.circleMarker(
+                [10.2116702, 38.6521203],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.975784284662087, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_b2bd151db3f646dba82adba95f49911a.bindTooltip(
+                `<div>
+                      Ethiopia 
+
+Total Cases = 5
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0c63c830a4ef473187a9bdb7a9c846bc = L.circleMarker(
+                [18.2214149, -66.41328179513847],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.975784284662087, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_0c63c830a4ef473187a9bdb7a9c846bc.bindTooltip(
+                `<div>
+                      Puerto Rico 
+
+Total Cases = 5
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_20e51ee804514612a5d122626a00b577 = L.circleMarker(
+                [-1.9646631, 30.0644358],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.975784284662087, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_20e51ee804514612a5d122626a00b577.bindTooltip(
+                `<div>
+                      Rwanda 
+
+Total Cases = 5
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_266a55a3a3fd46908001d7435d27c2f5 = L.circleMarker(
+                [7.9897371, -5.5679458],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_266a55a3a3fd46908001d7435d27c2f5.bindTooltip(
+                `<div>
+                      Ivory Coast 
+
+Total Cases = 4
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_52e8f55f9aac4365ac75dd785e1d28a2 = L.circleMarker(
+                [23.0131338, -80.8328748],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_52e8f55f9aac4365ac75dd785e1d28a2.bindTooltip(
+                `<div>
+                      Cuba 
+
+Total Cases = 4
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_86c32bd7856842038265c7767ecb7067 = L.circleMarker(
+                [46.8250388, 103.8499736],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_86c32bd7856842038265c7767ecb7067.bindTooltip(
+                `<div>
+                      Mongolia 
+
+Total Cases = 4
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4189be6f564f4a08834a0a60608b4545 = L.circleMarker(
+                [10.8677845, -60.9821067],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_4189be6f564f4a08834a0a60608b4545.bindTooltip(
+                `<div>
+                      Trinidad and Tobago 
+
+Total Cases = 4
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f0e6b3e4f2fe4bccaaeecf87855b5dd4 = L.circleMarker(
+                [-16.03442485, -146.0490931059517],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.764887502163469, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_f0e6b3e4f2fe4bccaaeecf87855b5dd4.bindTooltip(
+                `<div>
+                      French Polynesia 
+
+Total Cases = 3
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e69cc1d1a920441e85df3e5710f9e4ae = L.circleMarker(
+                [36.10674695, -5.335277183483561],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.764887502163469, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e69cc1d1a920441e85df3e5710f9e4ae.bindTooltip(
+                `<div>
+                      Gibraltar 
+
+Total Cases = 3
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dbf27ab5f29b4b02b955a7d12e9ac55f = L.circleMarker(
+                [13.450125700000001, 144.75755102972062],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.764887502163469, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_dbf27ab5f29b4b02b955a7d12e9ac55f.bindTooltip(
+                `<div>
+                      Guam 
+
+Total Cases = 3
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cd4da8e549d34d78b3a116674bbe10a5 = L.circleMarker(
+                [1.4419683, 38.4313975],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.764887502163469, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_cd4da8e549d34d78b3a116674bbe10a5.bindTooltip(
+                `<div>
+                      Kenya 
+
+Total Cases = 3
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c1c0e85caa6741159df91b492d2acd65 = L.circleMarker(
+                [17.9036287, -62.811568843006896],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.764887502163469, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_c1c0e85caa6741159df91b492d2acd65.bindTooltip(
+                `<div>
+                      St. Barth 
+
+Total Cases = 3
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cd53a1c85d4f4a49b800746aedcef3a4 = L.circleMarker(
+                [-4.6574977, 55.4540146],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.764887502163469, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_cd53a1c85d4f4a49b800746aedcef3a4.bindTooltip(
+                `<div>
+                      Seychelles 
+
+Total Cases = 3
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_83a53081ea7d4ae28c59d34c2e276e8d = L.circleMarker(
+                [9.6000359, 7.9999721],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_83a53081ea7d4ae28c59d34c2e276e8d.bindTooltip(
+                `<div>
+                      Nigeria 
+
+Total Cases = 2
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3b1a17e0734a40dbb6ac6347dd713886 = L.circleMarker(
+                [12.5013629, -69.9618475],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_3b1a17e0734a40dbb6ac6347dd713886.bindTooltip(
+                `<div>
+                      Aruba 
+
+Total Cases = 2
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_542dd6edbdd94acca3ca163b80efee0b = L.circleMarker(
+                [12.1845, -68.9640875031406],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_542dd6edbdd94acca3ca163b80efee0b.bindTooltip(
+                `<div>
+                      Curaçao 
+
+Total Cases = 2
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_97e389b174c344ca848d35a67ba2c219 = L.circleMarker(
+                [-4.0324901, 22.457478747924338],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_97e389b174c344ca848d35a67ba2c219.bindTooltip(
+                `<div>
+                      DRC 
+
+Total Cases = 2
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_839718d1c64547c6b683e7168a790b4a = L.circleMarker(
+                [-23.2335499, 17.3231107],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_839718d1c64547c6b683e7168a790b4a.bindTooltip(
+                `<div>
+                      Namibia 
+
+Total Cases = 2
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cb5923231f20451e83cb379044eaf26c = L.circleMarker(
+                [13.8250489, -60.975036],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_cb5923231f20451e83cb379044eaf26c.bindTooltip(
+                `<div>
+                      Saint Lucia 
+
+Total Cases = 2
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f0dae1ebc3e3452eba333aa9e0e3d8c0 = L.circleMarker(
+                [48.5683066, 6.7539988],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_f0dae1ebc3e3452eba333aa9e0e3d8c0.bindTooltip(
+                `<div>
+                      Saint Martin 
+
+Total Cases = 2
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c0f0b3db6a4c4c26b7a646f366595a58 = L.circleMarker(
+                [19.5417212, -80.5667132],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_c0f0b3db6a4c4c26b7a646f366595a58.bindTooltip(
+                `<div>
+                      Cayman Islands 
+
+Total Cases = 1
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_995ac66213de4c4c9c96a8775dd82dc3 = L.circleMarker(
+                [14.5844444, 29.4917691],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_995ac66213de4c4c9c96a8775dd82dc3.bindTooltip(
+                `<div>
+                      Sudan 
+
+Total Cases = 1
+ Deaths =  1 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9326e716947e40389bd3458f6f87cdcc = L.circleMarker(
+                [28.1083929, 84.0917139],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_9326e716947e40389bd3458f6f87cdcc.bindTooltip(
+                `<div>
+                      Nepal 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f8e1790102634b21881449a0f191bae0 = L.circleMarker(
+                [17.2234721, -61.9554608],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_f8e1790102634b21881449a0f191bae0.bindTooltip(
+                `<div>
+                      Antigua and Barbuda 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9b8ee51cb74f49bb9b1b30f2427f3421 = L.circleMarker(
+                [24.7736546, -78.0000547],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_9b8ee51cb74f49bb9b1b30f2427f3421.bindTooltip(
+                `<div>
+                      Bahamas 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_febe2e56ace44ebf9e5ba005d4c515bf = L.circleMarker(
+                [9.5293472, 2.2584408],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_febe2e56ace44ebf9e5ba005d4c515bf.bindTooltip(
+                `<div>
+                      Benin 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dd6c24b687354785853047a37898425c = L.circleMarker(
+                [27.549511, 90.5119273],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_dd6c24b687354785853047a37898425c.bindTooltip(
+                `<div>
+                      Bhutan 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4d72c401721e48919da3c251a025c8d8 = L.circleMarker(
+                [40.5250362, -81.0927234],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_4d72c401721e48919da3c251a025c8d8.bindTooltip(
+                `<div>
+                      CAR 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fc956ecba75340e9b2130ae8c06dcd7b = L.circleMarker(
+                [-0.7264327, 15.6419155],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_fc956ecba75340e9b2130ae8c06dcd7b.bindTooltip(
+                `<div>
+                      Congo 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_627ee113a8fd492a9a90a268c28723a3 = L.circleMarker(
+                [1.613172, 10.5170357],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_627ee113a8fd492a9a90a268c28723a3.bindTooltip(
+                `<div>
+                      Equatorial Guinea 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2cc552e255224db29f026a0abfb0daa3 = L.circleMarker(
+                [-0.8999695, 11.6899699],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_2cc552e255224db29f026a0abfb0daa3.bindTooltip(
+                `<div>
+                      Gabon 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a9468866c39f41a5be63cd72dc347bf1 = L.circleMarker(
+                [77.6192349, -42.8125967],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_a9468866c39f41a5be63cd72dc347bf1.bindTooltip(
+                `<div>
+                      Greenland 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0b5c0a255b754b40b75f1baa6dc83eca = L.circleMarker(
+                [10.7226226, -10.7083587],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_0b5c0a255b754b40b75f1baa6dc83eca.bindTooltip(
+                `<div>
+                      Guinea 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ba29d1f858a7404ca1da6c45a8819a52 = L.circleMarker(
+                [41.90381485, 12.453152716779822],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ba29d1f858a7404ca1da6c45a8819a52.bindTooltip(
+                `<div>
+                      Vatican City 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bc697289d87c47ccb70721908df6d1c9 = L.circleMarker(
+                [5.7499721, -9.3658524],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_bc697289d87c47ccb70721908df6d1c9.bindTooltip(
+                `<div>
+                      Liberia 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e29798d26c4948a48933ad75dc4bb1c4 = L.circleMarker(
+                [20.2540382, -9.2399263],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_e29798d26c4948a48933ad75dc4bb1c4.bindTooltip(
+                `<div>
+                      Mauritania 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ebf567e16ebc4f38bdba6c1e8b0986f0 = L.circleMarker(
+                [-12.823048, 45.1520755],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_ebf567e16ebc4f38bdba6c1e8b0986f0.bindTooltip(
+                `<div>
+                      Mayotte 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a554eee058f643dab5d19a6975021e8b = L.circleMarker(
+                [12.90447, -61.2765569],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_a554eee058f643dab5d19a6975021e8b.bindTooltip(
+                `<div>
+                      St. Vincent Grenadines 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6a330ccafcc34ab1b7b711b9d3a2166d = L.circleMarker(
+                [8.3676771, 49.083416],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_6a330ccafcc34ab1b7b711b9d3a2166d.bindTooltip(
+                `<div>
+                      Somalia 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_978460ee56544be287cbf4c9990050f5 = L.circleMarker(
+                [4.1413025, -56.0771187],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_978460ee56544be287cbf4c9990050f5.bindTooltip(
+                `<div>
+                      Suriname 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b8f0155f0e744cd98af661021930d0bc = L.circleMarker(
+                [-26.5624806, 31.3991317],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_b8f0155f0e744cd98af661021930d0bc.bindTooltip(
+                `<div>
+                      Eswatini 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4a14344369514988a424caa40d221a50 = L.circleMarker(
+                [-6.5247123, 35.7878438],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_4a14344369514988a424caa40d221a50.bindTooltip(
+                `<div>
+                      Tanzania 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d29e49eeaf6948d09f4f74eeae944f01 = L.circleMarker(
+                [8.7800265, 1.0199765],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_d29e49eeaf6948d09f4f74eeae944f01.bindTooltip(
+                `<div>
+                      Togo 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5905ae01ccab4e88a21da3f19ea46456 = L.circleMarker(
+                [17.789187, -64.7080574],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01, "stroke": false, "weight": 3}
+            ).addTo(map_298278579c714455afde7323a5fef5fd);
+        
+    
+            circle_marker_5905ae01ccab4e88a21da3f19ea46456.bindTooltip(
+                `<div>
+                      U.S. Virgin Islands 
+
+Total Cases = 1
+ Deaths =  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
