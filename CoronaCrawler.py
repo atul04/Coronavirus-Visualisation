@@ -2,7 +2,7 @@
 # @Date:   2019-01-27T16:51:15+05:30
 # @Email:  atulsahay01@gmail.com
 # @Last modified by:   atul
-# @Last modified time: 2020-03-17T23:26:21+05:30
+# @Last modified time: 2020-03-17T23:35:38+05:30
 
 import pandas as pd
 import folium
@@ -196,5 +196,5 @@ while(True):
                     # )
     # m.add_child(hm_wide)
     m.get_root().html.add_child(folium.Element(legend_html))
-    m.save('.././public_html/covid-19/index.html')
+    m.save('../.././public_html/covid-19/index.html')
     time.sleep(5 * 60)
